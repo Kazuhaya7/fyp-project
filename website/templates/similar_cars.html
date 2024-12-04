@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Similar Cars{% endblock %}
+
+{% block content %}
+<h1>Similar Cars to {{ selected_car.model }}</h1>
+
+{% if cars %}
+<div class="car-list">
+    {% for car in cars %}
+    <div class="car-item">
+        <div class="car-image">
+            <img src="{{ car['image_src'] }}" alt="{{ car.model }}">
+        </div>
+        <div class="car-details">
+            <h2>{{ car.variant }}</h2>
+            <p><strong>Price:</strong> RM{{ car.price }}</p>
+                <p><strong>Segment:</strong> {{ car.segment }}</p>
+                <p><strong>Body Type:</strong> {{ car.bodytype }}</p>
+                
+                <a href="{{ url_for('views.similar_cars', car_model=car.model) }}"><button type="submit">Similar Cars</button></a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No similar cars found.</p>
+{% endif %}
+
+{% endblock %}

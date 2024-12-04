@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Filter Cars{% endblock %}
+
+{% block content %}
+<div class="filter-form">
+  <h1>Filter Cars</h1>
+
+  <form action="{{ url_for('views.filter_cars') }}" method="post">
+    <div>
+      <label for="brand">Brand:</label>
+      <select id="brand" name="brand">
+        <option value="">None</option>
+        <option value="Perodua">Perodua</option>
+        <option value="Proton">Proton</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Honda">Honda</option>
+        <option value="Mitsubishi">Mitsubishi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes Benz">Mercedes Benz</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Isuzu">Isuzu</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="price">Price Range:</label>
+      <select id="price" name="price">
+        <option value="">None</option>
+        <option value="30000-50000">RM30,000 - RM50,000</option>
+        <option value="50001-70000">RM50,001 - RM70,000</option>
+        <option value="70001-90000">RM70,001 - RM90,000</option>
+        <option value="90001-110000">RM90,001 - RM110,000</option>
+        <option value="110001-150000">RM110,001 - RM150,000</option>
+        <option value="150001-200000">RM150,001 - RM200,000</option>
+        <option value="200001-300000">RM200,001 - RM300,000</option>
+        <option value="300001-400000">RM300,001 - RM400,000</option>
+        <option value="400001-700000">RM400,001 - RM700,000</option>
+        <option value="700001-1500000">RM700,001 - RM1,500,000</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="bodytype">Body Type:</label>
+      <select id="bodytype" name="bodytype">
+        <option value="">None</option>
+        <option value="SUV">SUV</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Wagon">Wagon</option>
+        <option value="Hatchback">Hatchback</option>
+        <option value="Coupe">Coupe</option>
+        <option value="Commercial">Commercial</option>
+        <option value="Pickup">Pickup</option>
+        <option value="MPV">MPV</option>
+        <option value="Convertible">Convertible</option>
+      </select>
+    </div>
+    
+    
+
+    <div>
+      <label for="transmission">Transmission:</label>
+      <select id="transmission" name="transmission">
+        <option value="">None</option>
+        <option value="8 Speed Automatic">8 Speed Automatic</option>
+        <option value="8-Speed Automatic Transmission with Geartronic">8-Speed Automatic Transmission with Geartronic</option>
+        <option value="8-Speed Geartronic">8-Speed Geartronic</option>
+        <option value="6-speed Direct Shift Gearbox (DSG)">6-speed Direct Shift Gearbox (DSG)</option>
+        <option value="7-speed Direct Shift Gearbox (DSG)">7-speed Direct Shift Gearbox (DSG)</option>
+        <option value="6-speed Manual">6-speed Manual</option>
+        <option value="8-speed Automatic with Super ECT, Paddle Shift">8-speed Automatic with Super ECT, Paddle Shift</option>
+        <option value="CVT-i with 7-speed Sequential Shift">CVT-i with 7-speed Sequential Shift</option>
+        <option value="6-speed Automatic with Sequential Shifter">6-speed Automatic with Sequential Shifter</option>
+        <option value="7DCT with Manual Mode">7DCT with Manual Mode</option>
+        <option value="AMG SPEEDSHIFT MCT 9-speed sports transmission">AMG SPEEDSHIFT MCT 9-speed sports transmission</option>
+        <option value="Xtronic CVT">Xtronic CVT</option>
+        <option value="8G-DCT">8G-DCT</option>
+        <option value="SkyActiv-Drive">SkyActiv-Drive</option>
+        <option value="6-speed Efficient Dual Clutch">6-speed Efficient Dual Clutch</option>
+        <option value="7-Speed Steptronic Dual Clutch Sports Transmission">7-Speed Steptronic Dual Clutch Sports Transmission</option>
+        <option value="9G-TRONIC">9G-TRONIC</option>
+        <option value="7G-TRONIC Plus">7G-TRONIC Plus</option>
+        <option value="AMG SPEEDSHIFT DCT 8-speed sports transmission">AMG SPEEDSHIFT DCT 8-speed sports transmission</option>
+        <option value="e-Skyactiv">e-Skyactiv</option>
+        <option value="6R80">6R80</option>
+        <option value="Steptronic Sport">Steptronic Sport</option>
+        <option value="10-Speed Direct Shift">10-Speed Direct Shift</option>
+        <option value="ZF 8-speed Automatic">ZF 8-speed Automatic</option>
+        <option value="8-Speed Steptronic Sport Transmission">8-Speed Steptronic Sport Transmission</option>
+        <option value="8-speed Auto Transmission with Manual Mode">8-speed Auto Transmission with Manual Mode</option>
+        <option value="Hyundai IVT">Hyundai IVT</option>
+        <option value="Intelligent Multi-mode Drive (i-MMD)">Intelligent Multi-mode Drive (i-MMD)</option>
+      </select>
+    </div>
+    
+    <div>
+      <label for="arrangement">Arrangement:</label>
+      <select id="arrangement" name="arrangement">
+        <option value="">None</option>
+        <option value="Lithium-Ion">Lithium-Ion</option>
+        <option value="Inline 4">Inline 4</option>
+        <option value="V 6">V 6</option>
+        <option value="Inline 3">Inline 3</option>
+        <option value="Inline 6">Inline 6</option>
+        <option value="Boxer 4">Boxer 4</option>
+        <option value="Flat 4 4">Flat 4 4</option>
+        <option value="Nickel Manganese Cobalt (NMC)">Nickel Manganese Cobalt (NMC)</option>
+        <option value="Lithium Iron Phosphate (LFP)">Lithium Iron Phosphate (LFP)</option>
+        <option value="Ternary Lithium Battery">Ternary Lithium Battery</option>
+        <option value="V 8">V 8</option>
+        <option value="Lithium-ion Polymer">Lithium-ion Polymer</option>
+        <option value="LFP">LFP</option>
+        <option value="Ternary Lithium">Ternary Lithium</option>
+        <option value="Lithium-iron Phosphate">Lithium-iron Phosphate</option>
+      </select>
+    </div>
+    
+    <div>
+      <label for="fuel">Fuel:</label>
+      <select id="fuel" name="fuel">
+        <option value="">None</option>
+        <option value="Petrol Plug-in Hybrid">Petrol Plug-in Hybrid</option>
+        <option value="Petrol Hybrid/REV">Petrol Hybrid/REV</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+      </select>
+    </div>
+    
+    
+    <button type="submit">Filter</button>
+  </form>
+</div>
+{% endblock %}

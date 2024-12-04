@@ -1,0 +1,254 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.filterlogo img
+{
+  height: 50px;
+  width: auto;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container-carbrand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.car-brand {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.car-brand button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.car-brand img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.car-brand img:hover {
+  transform: scale(1.1);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.car-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  width: 200px;
+}
+
+.car-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.filter-form {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.filter-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.filter-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.filter-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.filter-form select:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.filter-form button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #747474;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+
+.filter-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.filter-form button:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+
+.h1-container {
+  text-align: center; /* Center the <h1> text */
+  margin-bottom: 20px; /* Add spacing between <h1> and .car-list */
+}
+
+.car-specs {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.car-specs th, .car-specs td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.car-specs th {
+  background-color: #f2f2f2;
+}
+
+/* styles.css */
+.button-heading {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: inherit; /* Inherit text color */
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.button-primary {
+  background-color: transparent;
+  border-color: #007bff;
+  color: #000000;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  background-color: #ffffff;
+  color: #fff;
+}

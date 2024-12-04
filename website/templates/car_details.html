@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %}{{ car.brand }} {{ car.model }} Details{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ car.brand }} {{ car.model }}</h1>
+    <table class="car-specs">
+      <tr>
+        <td>Picture</td>
+        <td>{{ car.picture_src }}</td>
+    </tr>
+        <tr>
+            <th>Features</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td>{{ car.brand }}</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td>{{ car.model }}</td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td>{{ car.year }}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>{{ car.type }}</td>
+        </tr>
+        <tr>
+            <td>Dimension</td>
+            <td>{{ car.dimension }}</td>
+        </tr>
+        <tr>
+            <td>Wheelbase</td>
+            <td>{{ car.wheelbase }}</td>
+        </tr>
+        <tr>
+            <td>Seat Capacity</td>
+            <td>{{ car.seat_capacity }}</td>
+        </tr>
+        <tr>
+            <td>Boot Space</td>
+            <td>{{ car.boot_space }}</td>
+        </tr>
+        <tr>
+            <td>Engine</td>
+            <td>{{ car.engine }}</td>
+        </tr>
+        <tr>
+            <td>Valve</td>
+            <td>{{ car.valve }}</td>
+        </tr>
+        <tr>
+            <td>Engine Capacity</td>
+            <td>{{ car.engine_capacity }}</td>
+        </tr>
+        <tr>
+            <td>Cylinders</td>
+            <td>{{ car.cylinders }}</td>
+        </tr>
+        <tr>
+            <td>Timing Chain</td>
+            <td>{{ car.timing_chain }}</td>
+        </tr>
+        <tr>
+            <td>Compression Ratio</td>
+            <td>{{ car.compression_ratio }}</td>
+        </tr>
+        <tr>
+            <td>Max Power</td>
+            <td>{{ car.max_power }}</td>
+        </tr>
+        <tr>
+            <td>Torque</td>
+            <td>{{ car.torque }}</td>
+        </tr>
+        <tr>
+            <td>Max Speed</td>
+            <td>{{ car.max_speed }}</td>
+        </tr>
+        <tr>
+            <td>0-100 km/h</td>
+            <td>{{ car.zero_to_hundred }}</td>
+        </tr>
+        <tr>
+            <td>Transmission</td>
+            <td>{{ car.transmission }}</td>
+        </tr>
+        <tr>
+            <td>Fuel System</td>
+            <td>{{ car.fuel_system }}</td>
+        </tr>
+        <tr>
+            <td>Fuel Capacity</td>
+            <td>{{ car.fuel_capacity }}</td>
+        </tr>
+        <tr>
+            <td>Fuel Consumption</td>
+            <td>{{ car.fuel_consumption }}</td>
+        </tr>
+        <tr>
+            <td>Air Bag</td>
+            <td>{{ car.air_bag }}</td>
+        </tr>
+        <tr>
+            <td>ABS</td>
+            <td>{{ car.abs }}</td>
+        </tr>
+        <tr>
+            <td>Parking Brake</td>
+            <td>{{ car.parking_brake }}</td>
+        </tr>
+        <tr>
+            <td>Parking Sensor</td>
+            <td>{{ car.parking_sensor }}</td>
+        </tr>
+        <tr>
+            <td>Rear View Camera</td>
+            <td>{{ car.rear_view_camera }}</td>
+        </tr>
+        <tr>
+            <td>Seat Belt</td>
+            <td>{{ car.seat_belt }}</td>
+        </tr>
+        <tr>
+            <td>ISOFIX</td>
+            <td>{{ car.isofix }}</td>
+        </tr>
+        <tr>
+            <td>Anti Theft Device</td>
+            <td>{{ car.anti_theft_device }}</td>
+        </tr>
+        <tr>
+            <td>Speaker</td>
+            <td>{{ car.speaker }}</td>
+        </tr>
+        <tr>
+            <td>USB Port</td>
+            <td>{{ car.usb_port }}</td>
+        </tr>
+        <tr>
+            <td>Cup Holder</td>
+            <td>{{ car.cup_holder }}</td>
+        </tr>
+        <tr>
+            <td>Seat Material</td>
+            <td>{{ car.seat_material }}</td>
+        </tr>
+        <tr>
+            <td>Front Seat</td>
+            <td>{{ car.front_seat }}</td>
+        </tr>
+        <tr>
+            <td>Rear Seat</td>
+            <td>{{ car.rear_seat }}</td>
+        </tr>
+        <tr>
+            <td>Steering Wheel Switches</td>
+            <td>{{ car.steering_wheel_switches }}</td>
+        </tr>
+        <tr>
+            <td>Steering Wheel Adjustment</td>
+            <td>{{ car.steering_wheel_adjustment }}</td>
+        </tr>
+        <tr>
+            <td>Air Conditioning</td>
+            <td>{{ car.air_conditioning }}</td>
+        </tr>
+        <tr>
+            <td>Multi-Info Display</td>
+            <td>{{ car.multi_info_display }}</td>
+        </tr>
+        <tr>
+            <td>Key System</td>
+            <td>{{ car.key_system }}</td>
+        </tr>
+        <tr>
+            <td>Wheels</td>
+            <td>{{ car.wheels }}</td>
+        </tr>
+        <tr>
+            <td>Tire Size</td>
+            <td>{{ car.tire_size }}</td>
+        </tr>
+        <tr>
+            <td>Brakes</td>
+            <td>{{ car.brakes }}</td>
+        </tr>
+        <tr>
+            <td>Suspension</td>
+            <td>{{ car.suspension }}</td>
+        </tr>
+        <tr>
+            <td>Rear Combination Lights</td>
+            <td>{{ car.rear_combination_lights }}</td>
+        </tr>
+        <tr>
+            <td>Daytime Running Lights</td>
+            <td>{{ car.daytime_running_lights }}</td>
+        </tr>
+        <tr>
+            <td>Front Foglamps</td>
+            <td>{{ car.front_foglamps }}</td>
+        </tr>
+        <tr>
+            <td>Rear Foglamps</td>
+            <td>{{ car.rear_foglamps }}</td>
+        </tr>
+        
+        <tr>
+            <td>Rating</td>
+            <td>{{ car.rating }}</td>
+        </tr>
+        
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Mitsubishi Cars{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Mitsubishi Cars</h1>
+    <div class="car-list">
+        {% for car in cars %}
+        <div class="car-item">
+            <div class="car-image">
+                <img src="{{ car['image_src'] }}" alt="{{ car.model }}">
+            </div>
+            <div class="car-details">
+                <h2>{{ car.variant }}</h2>
+                <p><strong>Price:</strong> RM {{ car.price }}</p>
+                <p><strong>Monthly:</strong> RM {{ car.monthly }}</p>
+                <p><strong>Segment:</strong> {{ car.segment }}</p>
+                <p><strong>Body Type:</strong> {{ car.bodytype }}</p>
+                <p><strong>Engine:</strong> {{ car.engine }}</p>
+                <p><strong>Capacity:</strong> {{ car.Capacity }}</p>
+                <p><strong>Arrangement:</strong> {{ car.Arrangement }}</p>
+                <p><strong>Timing Type:</strong> {{ car['Timing Type'] }}</p>
+                <p><strong>Horsepower:</strong> {{ car.Horsepower }}</p>
+                <p><strong>Torque:</strong> {{ car.Torque }}</p>
+                <p><strong>Fuel:</strong> {{ car.Fuel }}</p>
+                <p><strong>Compression Ratio:</strong> {{ car['Compression Ratio'] }}</p>
+                <p><strong>Transmission:</strong> {{ car.Transmission }}</p>
+                <p><strong>Driveline:</strong> {{ car.Driveline }}</p>
+                <p><strong>Seats:</strong> {{ car.Seats }}</p>
+                <p><strong>Boot Space:</strong> {{ car['Boot Space'] }}</p>
+                <p><strong>Fuel Tank:</strong> {{ car['Fuel Tank'] }}</p>
+                <p><strong>Tyre Front:</strong> {{ car['Tyre Front'] }}</p>
+                <p><strong>Tyre Rear:</strong> {{ car['Tyre Rear'] }}</p>
+                <p><strong>Front Brakes:</strong> {{ car['Front Brakes'] }}</p>
+                <p><strong>Rear Brakes:</strong> {{ car['Rear Brakes'] }}</p>
+                <p><strong>Airbags:</strong> {{ car.Airbags }}</p>
+                <p><strong>Headlamps:</strong> {{ car.Headlamps }}</p>
+                <p><strong>Taillamps:</strong> {{ car.Taillamps }}</p>
+                <p><strong>Seats Front:</strong> {{ car['Seats Front'] }}</p>
+                <p><strong>Seats Rear:</strong> {{ car['Seats Rear'] }}</p>
+                <p><strong>Audio:</strong> {{ car.Audio }}</p>
+                <p><strong>Parking Brake:</strong> {{ car['Parking Brake'] }}</p>
+                <a href="{{ url_for('views.similar_cars', car_model=car.model) }}"><button type="submit">Similar Cars</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

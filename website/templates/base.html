@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Car Recommendation Website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('views.home') }}">
+                <img src="{{ url_for('static', filename='images/DriveVibe.png') }}" alt="Car Recommendation Logo">
+            </a>
+        </div>
+        <div class="search-bar">
+            <form action="{{ url_for('views.search') }}" method="get">
+                <input type="text" name="query" placeholder="Search for cars...">
+            </form>
+        </div>
+
+        <div class="filterlogo">
+            <a href="{{ url_for('views.filter_cars') }}">
+                <img src="{{ url_for('static', filename='images/Tailored_your_own_ride.png') }}" alt="Filter Logo">
+            </a>
+        </div>
+    </header>
+
+    <div class="container-car">
+        <div class="car-brand">
+            <a href="{{ url_for('views.perodua') }}"><img src="{{ url_for('static', filename='images/perodua-logo1.jpg') }}" alt="Perodua"></a>
+            <a href="{{ url_for('views.proton') }}"><img src="{{ url_for('static', filename='images/proton-logo.jpg') }}" alt="Proton"></a>
+            <a href="{{ url_for('views.toyota') }}"><img src="{{ url_for('static', filename='images/toyota-logo.jpg') }}" alt="Toyota"></a>
+            <a href="{{ url_for('views.honda') }}"><img src="{{ url_for('static', filename='images/honda-logo2.jpg') }}" alt="Honda"></a>
+            <a href="{{ url_for('views.mazda') }}"><img src="{{ url_for('static', filename='images/mazda-logo.jpg') }}" alt="Mazda"></a>
+            <a href="{{ url_for('views.mitsubishi') }}"><img src="{{ url_for('static', filename='images/mitsubishi-logo.png') }}" alt="Mitsubishi"></a>
+            <a href="{{ url_for('views.mercedes_benz') }}"><img src="{{ url_for('static', filename='images/logo-mercedes.jpg') }}" alt="Mercedes Benz"></a>
+            <a href="{{ url_for('views.bmw') }}"><img src="{{ url_for('static', filename='images/bmw-logo.png') }}" alt="BMW"></a>
+            <a href="{{ url_for('views.nissan') }}"><img src="{{ url_for('static', filename='images/nissan-logo.jpg') }}" alt="Nissan"></a>
+            <a href="{{ url_for('views.isuzu') }}"><img src="{{ url_for('static', filename='images/isuzu-logo.gif') }}" alt="Isuzu"></a>
+        </div>
+      </div>
+      
+    
+    <div class="container">
+        {% block content %} 
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Car Recommendation Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
